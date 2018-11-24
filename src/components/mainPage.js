@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Container ,Button, Card,  Form , FormGroup,Label, Input, Col, Row} from 'reactstrap';
+import { Container ,Button, Card,  Form , FormGroup, Input, Col, Row} from 'reactstrap';
 import './mainPage.css';
 import {connect} from 'react-redux';
 import {getNotes ,addNotes} from '../actions/actionCreaters';
@@ -47,10 +47,9 @@ class MainPage extends Component {
 	render() {
 		let displayNotes = [];
 		if(this.props.notes) {
-		this.props.notes.map( (index) => {
+		this.props.notes.map( (index) => 
 				displayNotes.push(	
-							<Col md = {3} sm = {4}>
-								<div key = {index.id}>
+							<Col md = {3} sm = {4} key = {index.id} >
 									<Card >
 										<Container>
 											<h4>{index.title}</h4>
@@ -58,13 +57,11 @@ class MainPage extends Component {
 										</Container>
 									</Card>
 								<br/>
-								</div>
 								</Col>	
-);
+)
 			
-		});
+		);
 		}
-		console.log(this.props.user);
 		return (
 			<div>
 			<br/>

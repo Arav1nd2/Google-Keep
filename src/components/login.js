@@ -3,8 +3,6 @@ import { Button, Form , FormGroup,Label, Input,Container, Col, Card,
 	Nav, NavItem, NavLink, TabContent, TabPane 
  } from 'reactstrap';
 import classnames from 'classnames';
-import {} from './../store.js';
-import {notify} from 'react-notify-toast';
 import {connect} from 'react-redux'; 
 import {login , register} from '../actions/actionCreaters';
 
@@ -56,14 +54,6 @@ class LoginPage extends React.Component {
 
 	}
 	render() {
-		var lProp = {};
-		if(!this.state.loginBtn) {
-			lProp['disabled'] = 'disabled';
-		}
-		var rProp = {};
-		if(!this.state.registerBtn) {
-			rProp['disabled'] = 'disabled';
-		}
 		return (
 				<div>
 					<br/><br/><br/><br/>
@@ -101,7 +91,7 @@ class LoginPage extends React.Component {
 									</Col>
 								</FormGroup>
 								</Form>
-								<Button color = "warning" {...lProp} onClick = {this.handleLoginButtonClick}>Submit</Button>
+								<Button color = "warning"  onClick = {this.handleLoginButtonClick}>Submit</Button>
 								<br/><br/>
 							</Container>
 							</TabPane>	
@@ -128,7 +118,7 @@ class LoginPage extends React.Component {
 											</Col>
 										</FormGroup>
 										</Form>	
-									<Button color = "warning" {...rProp} onClick = {this.handleRegisterButtonClick}>Submit</Button>
+									<Button color = "warning"  onClick = {this.handleRegisterButtonClick}>Submit</Button>
 									<br/><br/>
 								</Container>
 							</TabPane>

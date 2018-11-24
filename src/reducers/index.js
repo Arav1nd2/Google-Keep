@@ -1,4 +1,4 @@
-import { LOGIN, LOGOUT, REGISTER, GOOGLE_LOGIN, CHECK_USER, NULL_USER, GET_NOTES, DELETE_NOTES,ADD_NOTES } from '../actions/actions.js';
+import { LOGIN, LOGOUT, REGISTER, GOOGLE_LOGIN, CHECK_USER, NULL_USER, GET_NOTES,ADD_NOTES } from '../actions/actions.js';
 
 
 

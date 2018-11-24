@@ -1,6 +1,5 @@
-import { LOGIN, LOGOUT, REGISTER, GOOGLE_LOGIN, CHECK_USER,NULL_USER, GET_NOTES, DELETE_NOTES , ADD_NOTES } from './actions.js';
+import { LOGIN, LOGOUT, REGISTER, GOOGLE_LOGIN, CHECK_USER,NULL_USER, GET_NOTES , ADD_NOTES } from './actions.js';
 import {auth , provider , database} from '../firebase';
-import firebase from 'firebase';
 import {notify} from 'react-notify-toast';
 import {store} from '../store';
 
