@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar, NavbarBrand, Nav, NavLink, Collapse, NavItem, Container, card } from  'reactstrap';
-import { BrowserRouter, Route ,Link } from 'react-router-dom';
+import { Navbar, NavbarBrand, Nav, NavLink, NavItem} from  'reactstrap';
 import MainPage from "./components/mainPage";
 import LoginPage from './components/login';
-import {auth} from './firebase';
-import firebase from 'firebase'; 
-import Notifications, {notify} from 'react-notify-toast';
+import Notifications from 'react-notify-toast';
 import { connect } from 'react-redux';
 import {checkUser, signOut} from './actions/actionCreaters';
 

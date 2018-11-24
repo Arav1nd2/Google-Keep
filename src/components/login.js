@@ -3,11 +3,10 @@ import { Button, Form , FormGroup,Label, Input,Container, Col, Card,
 	Nav, NavItem, NavLink, TabContent, TabPane 
  } from 'reactstrap';
 import classnames from 'classnames';
-import googleSignin from './../assets/google.png';
 import {} from './../store.js';
 import {notify} from 'react-notify-toast';
 import {connect} from 'react-redux'; 
-import {login , register , googleLogin} from '../actions/actionCreaters';
+import {login , register} from '../actions/actionCreaters';
 
 class LoginPage extends React.Component {
 	constructor(props) {
@@ -51,7 +50,7 @@ class LoginPage extends React.Component {
 		}
 		this.handleRegisterButtonClick = () => {
 			if(this.state.r01 !== "" && this.state.r02 !== "" && this.state.r03 !== "") {
-				this.props.register(this.state.r02,this.state.r03);
+				this.props.register(this.state.r01, this.state.r02,this.state.r03);
 			}
 		}
 
@@ -104,10 +103,7 @@ class LoginPage extends React.Component {
 								</Form>
 								<Button color = "warning" {...lProp} onClick = {this.handleLoginButtonClick}>Submit</Button>
 								<br/><br/>
-								<a> Or </a>
-								<img src = {googleSignin} width = "30%" height = "30%"  onClick = {this.props.googleLogin} />
-								<br/> <br/>
-								</Container>
+							</Container>
 							</TabPane>	
 							<TabPane tabId = "2">
 								<Container>
@@ -147,4 +143,4 @@ const mapStateToProps = (state) => ({
 	user : state.user	
 })
 
-export default connect(mapStateToProps, { login , register , googleLogin })(LoginPage);
+export default connect(mapStateToProps, { login , register  })(LoginPage);

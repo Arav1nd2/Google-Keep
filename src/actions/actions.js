@@ -4,3 +4,6 @@ export const GOOGLE_LOGIN = 'google-login';
 export const REGISTER = 'register';
 export const CHECK_USER = 'check-user';
 export const NULL_USER = 'null-user';
+export const GET_NOTES = 'get-notes';
+export const DELETE_NOTES = 'delete';
+export const ADD_NOTES = 'add-notes';
